@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+SQLAlchemy
+pymysql
+alembic
+python-dotenv
+httpx
+newsapi-python
+celery[redis]
+redis
+uvicorn
+pydantic
+loguru
+python-multipart
