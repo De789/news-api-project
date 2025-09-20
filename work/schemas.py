@@ -3,25 +3,22 @@ from datetime import datetime
 from typing import Optional
 
 
+# Model for creating a news article
 class NewsArticleCreate(BaseModel):
-source: Optional[str]
-author: Optional[str]
-title: str
-description: Optional[str]
-url: str
-published_at: datetime
+    source: Optional[str]
+    author: Optional[str]
+    title: str
+    description: Optional[str]
+    url: str
+    published_at: datetime
 
 
+# Model for outputting a news article
 class NewsArticleOut(BaseModel):
-id: int
-source: Optional[str]
-author: Optional[str]
-title: str
-description: Optional[str]
-url: str
-published_at: datetime
-fetched_at: datetime
+    title: str
+    description: Optional[str]
+    url: str
+    published_at: datetime
 
-
-class Config:
-# orm_mode = Tr
+    class Config:
+        orm_mode = True
